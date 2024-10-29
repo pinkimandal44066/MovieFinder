@@ -64,6 +64,7 @@
 import { useEffect, useState } from "react";
 import { useAuthContext } from "../../contextfolder/AuthContext"
 import { FaWindowClose } from 'react-icons/fa';
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -89,9 +90,10 @@ const handleSearch = () => {
    
        <nav className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white p-4 shadow-lg fixed top-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
+        <NavLink to='/'>
         <div className="text-yellow-400 font-extrabold text-xl md:text-2xl  tracking-widest">🎬 Movie</div>
 
-
+        </NavLink>
 
 
 
