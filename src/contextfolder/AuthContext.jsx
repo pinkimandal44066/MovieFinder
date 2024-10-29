@@ -1,5 +1,5 @@
 import axios from "./axios";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext();
@@ -14,7 +14,7 @@ const AuthProvider = (props) => {
     data: [],
     total: 0,
   });
-  const [movieDetails, setMovieDetails] = useState({ // Fixed typo here
+  const [movieDetails, setMovieDetails] = useState({
     loading: false,
     data: {},
   });
@@ -27,6 +27,7 @@ const AuthProvider = (props) => {
         `?type=movie&apikey=${apiKey}&s=marvel&page=${num}`
       );
       if (status === 200) {
+        // console.log(totalResults);
         setAllMovie({
           data: data.Search || [],
           loading: false,
@@ -47,7 +48,7 @@ const AuthProvider = (props) => {
         setMovieDetails({ data: data || {}, loading: false });
       }
     } catch (error) {
-      console.error("Error fetching movie details:", error.message);
+      console.error("Error fetching movies:", error.message);
       setMovieDetails({ data: {}, loading: false });
     }
   };
@@ -78,7 +79,7 @@ const AuthProvider = (props) => {
         allMovie,
         getAllMovie,
         getAllMovieDetails,
-        movieDetails, // Use the corrected state name here
+        movieDetails,
         getSearch,
         search,
       }}

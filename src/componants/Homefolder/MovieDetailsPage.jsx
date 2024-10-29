@@ -3,14 +3,14 @@ import { useParams } from 'react-router-dom';
 import { useAuthContext } from '../../contextfolder/AuthContext';
 
 const MovieDetailsPage = () => {
-    const { getAllMovieDetails, movieDeatils } = useAuthContext();
+    const { getAllMovieDetails, movieDetails } = useAuthContext();
     const { id } = useParams();
 
     useEffect(() => {
         getAllMovieDetails(id);
     }, [id]);
 
-    if (!movieDeatils) return <div>Loading...</div>;
+    if (!movieDetails) return <div>Loading...</div>;
 
     const {
         Title,
@@ -26,7 +26,7 @@ const MovieDetailsPage = () => {
         imdbRating,
         imdbVotes,
         Awards,
-    } = movieDeatils.data;
+    } = movieDetails.data;
 
     return (
         <div className="flex flex-col items-center p-6 bg-gray-900 text-white">
