@@ -14,7 +14,7 @@ const AuthProvider = (props) => {
     data: [],
     total: 0,
   });
-  const [movieDeatils, setMovieDetails] = useState({
+  const [movieDetails, setMovieDetails] = useState({
     loading: false,
     data: {},
   });
@@ -79,7 +79,7 @@ const AuthProvider = (props) => {
         allMovie,
         getAllMovie,
         getAllMovieDetails,
-        movieDeatils,
+        movieDetails,
         getSearch,
         search,
       }}
