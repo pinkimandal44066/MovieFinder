@@ -4,7 +4,7 @@
 
   <div className="flex items-center justify-center gap-3 mt-7">
     <a 
-      href={item.Brochure} // Assuming this is the correct path to the brochure PDF
+      href={item.Brochure} 
       download
       className="py-2 lg:px-12 md:px-11 px-8 bg-[#f85b13] rounded-[50px] flex items-center justify-center gap-5"
     >

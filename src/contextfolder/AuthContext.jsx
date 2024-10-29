@@ -5,11 +5,7 @@ import { useNavigate } from "react-router-dom";
 export const AuthContext = createContext();
 
 const AuthProvider = (props) => {
-
   const apiKey = import.meta.env.VITE_API_KEY;
-
-
-
 
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -47,9 +43,7 @@ const AuthProvider = (props) => {
   const getAllMovieDetails = async (id) => {
     setMovieDetails({ data: {}, loading: true });
     try {
-      const { data, status } = await axios.get(
-        `?i=${id}&apikey=${apiKey}`
-      );
+      const { data, status } = await axios.get(`?i=${id}&apikey=${apiKey}`);
       if (status === 200) {
         setMovieDetails({ data: data || {}, loading: false });
       }
@@ -66,7 +60,7 @@ const AuthProvider = (props) => {
         `?type=movie&apikey=${apiKey}&s=${text}`
       );
       if (status === 200) {
-        navigate(`/?searchData=${text}`)
+        navigate(`/?searchData=${text}`);
         setSearch({
           data: data.Search || [],
           loading: false,
