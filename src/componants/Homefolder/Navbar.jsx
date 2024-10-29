@@ -1,40 +1,3 @@
-// // import React from 'react'
-
-// import { useEffect, useState } from "react";
-// import { useAuthContext } from "../../contextfolder/AuthContext"
-
-// const Navbar = () => {
-
-// const { search ,getSearch } = useAuthContext();
-// const [searchData, setSearchData] = useState("");
-
-// // useEffect(()=>{
-// //   getSearch(searchData)
-// // }, [searchData])
-
-// console.log(search);
-
-// const handleSearch = () => {
-//   if (searchData) {
-//     getSearch(searchData)
-//   }
-// }
-
-
-//   return (
-//     <div>
-//       Navbar.....
-//       <input
-//       value={searchData}
-//       onChange={(e)=> setSearchData(e.target.value)}
-//        type="text" className="border-2 border-red-600" />
-//        <button onClick={handleSearch}>Search</button>
-//     </div>
-//   )
-// }
-
-// export default Navbar
-
 
 
 
@@ -102,22 +65,6 @@ const handleSearch = () => {
 
 
 
-
-
-
-        {/* Search Bar */}
-        {/* <div className="hidden md:flex items-center space-x-2 flex-grow max-w-lg mx-auto">
-          <select className="bg-gray-700 text-white rounded-lg px-3 py-2 outline-none border border-gray-600">
-            <option>All</option>
-            <option>Movies</option>
-            <option>TV Shows</option>
-          </select>
-          <input
-            type="text"
-            placeholder="Find your movie..."
-            className="w-full px-4 py-2 text-gray-900 bg-white rounded-lg border border-gray-600 focus:ring-2 focus:ring-yellow-500"
-          />
-        </div> */}
 
 
         <div className="hidden md:flex items-center space-x-2 flex-grow max-w-lg mx-auto">
