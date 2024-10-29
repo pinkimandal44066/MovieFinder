@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/moviedetailspage/:id", "destination": "/index.html" },
+    { "source": "/moviedetailspage/(.*)", "destination": "/index.html" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
